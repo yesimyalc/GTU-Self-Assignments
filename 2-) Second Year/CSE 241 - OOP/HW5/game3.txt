@@ -1,0 +1,20 @@
+6
+6
+user vs computer
+User
+..XOOXXOXOXO.OXXO...................
+14
+C1	X
+D1	O
+C2	X
+D2	O
+D3	X
+E3	O
+E2	X
+F2	O
+C3	X
+B3	O
+F1	X
+E1	O
+A2	X
+B2	O

@@ -1,0 +1,6 @@
+Email-Name-Surname-Password-BranchNo
+
+menma03@gmail.com Menma Taylor 12345
+keira02@gmail.com Keira Manor 1234
+loven@gmail.com Loven Connor 2321
+leila@gmail.com Leila Faves 123456

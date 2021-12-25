@@ -1,0 +1,26 @@
+Email-Name-Surname-Password-CustomerNo-PhoneNumber-Address
+-
+keira@gmail.com Keira Clark 12345 1 40826238223 1466TaralawnCt
+PastOrders
+Office_Chair 7 Black 0
+Office_Chair 6 White 1
+NewOrders
+Office_Chair 7 Black 0
+Office_Chair 5 Black 0
+-
+y.yalcin@gmail.com Jaden Ruggeds 12345 2 4082435345 1606TaralawnCt
+PastOrders
+Office_Chair 3 Blue 3
+Meeting_Table 6 Black 2
+NewOrders
+Meeting_Table 6 Black 2
+Office_Chair 3 Blue 3
+-
+fayron@gmail.com Fayron Carol 23323 3
+PastOrders
+Office_Cabinet 8 Black 1
+Office_Cabinet 8 Black 1
+Meeting_Table 9 Blue 0
+NewOrders
+Meeting_Table 9 Blue 0
+Meeting_Table 6 Black 2

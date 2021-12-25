@@ -1,0 +1,21 @@
+6
+6
+user vs user
+User2
+X.OXXX.XOX.X.OO...OX....OO..........
+15
+B2	X
+C3	O
+D1	X
+C1	O
+A1	X
+C2	O
+D2	X
+B3	O
+B4	X
+A4	O
+E1	X
+A5	O
+F1	X
+B5	O
+F2	X

@@ -1,0 +1,14 @@
+7
+7
+user vs computer
+User
+...XO...XOXO...........XO........................
+8
+B2	X
+C2	O
+C4	X
+D4	O
+D1	X
+E1	O
+D2	X
+E2	O

@@ -1,0 +1,24 @@
+7
+7
+user vs user
+User1
+OOOXOOOXXXX.X..O.XX...O....O......X..............
+18
+F2	X
+G1	O
+G5	X
+G4	O
+B2	X
+C1	O
+D1	X
+B1	O
+C2	X
+E1	O
+A2	X
+F1	O
+D2	X
+A1	O
+D3	X
+B3	O
+E3	X
+B4	O

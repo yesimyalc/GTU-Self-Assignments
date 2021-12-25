@@ -1,0 +1,48 @@
+n
+(a,a)(a,b)(a,e)(b,b)(b,e)(c,c)(c,d)(d,d)(e,e)
+Reflexive: Yes. Because:(a,a) (b,b) (c,c) (d,d) (e,e) are found.
+Symmetric: No. Because:(a,b) is found but (b,a) is not found.
+Antisymmetric: Yes. Because none of the symmetric elements excluding the ones with the same two values are found. For example:(a,b) is found but (b,a) is not found.
+Transitive: Yes. Because all the necessary elements are found.For example:(c,d) is found since (c,d) and (d,d) are found.
+n
+(a,a)(a,b)(b,a)(b,b)(c,c)(c,d)(d,c)(d,d)
+Reflexive: No. Because:(a,a) (b,b) (c,c) (d,d) are found. (e,e) is not found.
+Symmetric: Yes. Because all the symmetric elements are found for example:(a,b) and (b,a) are found.
+Antisymmetric: No. Because:(a,b) is found but also (b,a) is found.
+Transitive: Yes. Because all the necessary elements are found.For example:(c,d) is found since (c,d) and (d,d) are found.
+n
+(a,a)(b,b)(c,c)(d,d)(e,e)
+Reflexive: Yes. Because:(a,a) (b,b) (c,c) (d,d) (e,e) are found.
+Symmetric: Yes. Because all the symmetric elements are found for example:(a,a) and (a,a) are found.
+Antisymmetric: Yes. Because none of the symmetric elements excluding the ones with the same two values are found.
+Transitive: Yes. Because all the necessary elements are found.For example:(a,a) is found since (a,a) and (a,a) are found.
+n
+(1,1)(1,2)(2,1)
+Reflexive: No. Because:(1,1) are found. (2,2) is not found. (3,3) is not found. (4,4) is not found.
+Symmetric: Yes. Because all the symmetric elements are found for example:(1,2) and (2,1) are found.
+Antisymmetric: No. Because:(1,2) is found but also (2,1) is found.
+Transitive: Yes. Because all the necessary elements are found.For example:(1,1) is found since (1,2) and (2,1) are found.
+n
+(1,1)(1,2)(2,1)(2,2)(3,4)(4,1)(4,4)
+Reflexive: No. Because:(1,1) (2,2) (4,4) are found. (3,3) is not found.
+Symmetric: No. Because:(3,4) is found but (4,3) is not found.
+Antisymmetric: No. Because:(1,2) is found but also (2,1) is found.
+Transitive: No. Because:(3,4) and (4,1) is found but (3,1) is not found.
+n
+(2,1)(3,1)(3,2)(4,1)(4,2)(4,3)
+Reflexive: No. Because:none of the reflexive elements are found.
+Symmetric: No. Because:(2,1) is found but (1,2) is not found.
+Antisymmetric: Yes. Because none of the symmetric elements excluding the ones with the same two values are found. For example:(2,1) is found but (1,2) is not found.
+Transitive: Yes. Because all the necessary elements are found.
+n
+(1,1)(1,2)(1,3)(1,4)(2,2)(2,3)(2,4)(3,3)(3,4)(4,4)
+Reflexive: Yes. Because:(1,1) (2,2) (3,3) (4,4) are found.
+Symmetric: No. Because:(1,2) is found but (2,1) is not found.
+Antisymmetric: Yes. Because none of the symmetric elements excluding the ones with the same two values are found. For example:(1,2) is found but (2,1) is not found.
+Transitive: Yes. Because all the necessary elements are found.For example:(3,4) is found since (3,4) and (4,4) are found.
+n
+(1,1)(1,2)(1,4)(2,1)(2,2)(3,3)(4,1)(4,4)
+Reflexive: Yes. Because:(1,1) (2,2) (3,3) (4,4) are found.
+Symmetric: Yes. Because all the symmetric elements are found for example:(1,2) and (2,1) are found.
+Antisymmetric: No. Because:(1,2) is found but also (2,1) is found.
+Transitive: Yes. Because all the necessary elements are found.For example:(1,4) is found since (1,4) and (4,4) are found.

@@ -1,0 +1,47 @@
+8
+8
+user vs computer
+User
+100
+18
+18
+.XO.OXOXXO..OXXOXOXO....XXO...XOOXOOXXO..XOXO...OXXO............
+36
+B1	X
+C1	O
+F5	X
+G5	O
+H1	X
+G1	O
+A2	X
+B2	O
+G2	X
+H2	O
+F2	X
+E2	O
+A3	X
+B3	O
+B4	X
+C4	O
+A4	X
+A5	O
+C3	X
+D3	O
+B5	X
+C5	O
+F1	X
+E1	O
+B6	X
+C6	O
+C7	X
+D7	O
+B7	X
+A7	O
+D6	X
+E6	O
+E5	X
+D5	O
+G4	X
+H4	O
+14
+7

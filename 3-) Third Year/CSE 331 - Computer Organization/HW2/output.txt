@@ -1,0 +1,6 @@
+Array_outpt: [-3,4,12,43,56,67] size=6
+Array_outpt: [5,8] size=2
+Array_outpt: [4,7,9,11] size=4
+Array_outpt: [4,9,12] size=3
+Array_outpt: [-56,2,34,78] size=4
+Array_outpt: [-101,23,45,89] size=4

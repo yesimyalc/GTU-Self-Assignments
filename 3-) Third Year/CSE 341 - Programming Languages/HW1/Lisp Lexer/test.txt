@@ -1,0 +1,13 @@
+;; helloworld.g++
+(deffun sumup (x) 
+(if (equal x 0) 
+1 
+(+ x (sumup (-x 1)))))
+
+(list 1 2 123)
+"
+2.3 456.32 0.122 230.0023 0.1
+(0.232 0.2)"
+ansds2323 orand 23qed or and
+
+exit

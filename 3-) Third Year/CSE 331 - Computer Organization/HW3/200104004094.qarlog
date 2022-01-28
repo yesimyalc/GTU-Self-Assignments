@@ -1,0 +1,78 @@
+Quartus II Archive log --	C:/altera/13.1/workspace/hw1/200104004094_hw4.qarlog
+
+Archive:	C:/altera/13.1/workspace/hw1/200104004094_hw4.qar
+Date:		Sat Jan 01 13:18:18 2022
+Quartus II 64-Bit		13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+	=========== Files Selected: ===========
+C:/altera/13.1/workspace/hw1/adder.v
+C:/altera/13.1/workspace/hw1/adder6Bit.v
+C:/altera/13.1/workspace/hw1/adder6Bit_testbench.v
+C:/altera/13.1/workspace/hw1/adder_testbench.v
+C:/altera/13.1/workspace/hw1/alu32.v
+C:/altera/13.1/workspace/hw1/alu32_testbench.v
+C:/altera/13.1/workspace/hw1/aluController.v
+C:/altera/13.1/workspace/hw1/aluControllerTestbench.v
+C:/altera/13.1/workspace/hw1/and32Bit.v
+C:/altera/13.1/workspace/hw1/and32Bit1Input.v
+C:/altera/13.1/workspace/hw1/and32Bit_testbench.v
+C:/altera/13.1/workspace/hw1/and4Input.v
+C:/altera/13.1/workspace/hw1/control.v
+C:/altera/13.1/workspace/hw1/control_testbench.v
+C:/altera/13.1/workspace/hw1/datapath.v
+C:/altera/13.1/workspace/hw1/datapath_testbench.v
+C:/altera/13.1/workspace/hw1/db/hw1.db_info
+C:/altera/13.1/workspace/hw1/fullAdder.v
+C:/altera/13.1/workspace/hw1/fullAdder_testbench.v
+C:/altera/13.1/workspace/hw1/halfAdder.v
+C:/altera/13.1/workspace/hw1/halfAdder_testbench.v
+C:/altera/13.1/workspace/hw1/hw1.qpf
+C:/altera/13.1/workspace/hw1/hw1.qsf
+C:/altera/13.1/workspace/hw1/incremental_db/compiled_partitions/hw1.db_info
+C:/altera/13.1/workspace/hw1/instruction.mem
+C:/altera/13.1/workspace/hw1/instructionMemory.v
+C:/altera/13.1/workspace/hw1/instructionMemoryTestbench.v
+C:/altera/13.1/workspace/hw1/mainController.v
+C:/altera/13.1/workspace/hw1/mainControllerTestbench.v
+C:/altera/13.1/workspace/hw1/memory.mem
+C:/altera/13.1/workspace/hw1/memory.v
+C:/altera/13.1/workspace/hw1/memoryTestbench.v
+C:/altera/13.1/workspace/hw1/miniMips.v
+C:/altera/13.1/workspace/hw1/miniMispTestbench.v
+C:/altera/13.1/workspace/hw1/mult32.v
+C:/altera/13.1/workspace/hw1/mult32_testbench.v
+C:/altera/13.1/workspace/hw1/mux2Input.v
+C:/altera/13.1/workspace/hw1/mux2Input32Bit.v
+C:/altera/13.1/workspace/hw1/mux2Input3Bit.v
+C:/altera/13.1/workspace/hw1/mux2Input64Bit.v
+C:/altera/13.1/workspace/hw1/mux2Input64Bit_testbench.v
+C:/altera/13.1/workspace/hw1/mux2Input_testbench.v
+C:/altera/13.1/workspace/hw1/mux8Input.v
+C:/altera/13.1/workspace/hw1/mux8Input32Bit.v
+C:/altera/13.1/workspace/hw1/mux8Input32Bit_testbench.v
+C:/altera/13.1/workspace/hw1/mux8Input_testbench.v
+C:/altera/13.1/workspace/hw1/my_nor.v
+C:/altera/13.1/workspace/hw1/my_nor32Bit.v
+C:/altera/13.1/workspace/hw1/my_nor32Bit_testbench.v
+C:/altera/13.1/workspace/hw1/my_nor_testbench.v
+C:/altera/13.1/workspace/hw1/my_xor.v
+C:/altera/13.1/workspace/hw1/my_xor32Bit.v
+C:/altera/13.1/workspace/hw1/my_xor32Bit_testbench.v
+C:/altera/13.1/workspace/hw1/my_xor_testbench.v
+C:/altera/13.1/workspace/hw1/not32Bit.v
+C:/altera/13.1/workspace/hw1/not32Bit_testbench.v
+C:/altera/13.1/workspace/hw1/or32Bit.v
+C:/altera/13.1/workspace/hw1/or32Bit_testbench.v
+C:/altera/13.1/workspace/hw1/or7Input.v
+C:/altera/13.1/workspace/hw1/registers.mem
+C:/altera/13.1/workspace/hw1/registers.v
+C:/altera/13.1/workspace/hw1/registersTestbench.v
+C:/altera/13.1/workspace/hw1/shiftRight.v
+C:/altera/13.1/workspace/hw1/shiftRight_testbench.v
+C:/altera/13.1/workspace/hw1/signExtend.v
+C:/altera/13.1/workspace/hw1/signExtendTestbench.v
+c:/altera/13.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 67 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

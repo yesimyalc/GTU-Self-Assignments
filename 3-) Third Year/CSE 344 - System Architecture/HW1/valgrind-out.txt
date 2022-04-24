@@ -1,0 +1,96 @@
+==5447== Memcheck, a memory error detector
+==5447== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==5447== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
+==5447== Command: ./output /m[opr]e[zk]e[kmn]l[bcd][an]$/PASW/i;/^me*[opr]*t[zk][kmn]*[bcd][at]*/Dis/i input.txt
+==5447== Parent PID: 5104
+==5447== 
+--5447-- 
+--5447-- Valgrind options:
+--5447--    --leak-check=full
+--5447--    --show-leak-kinds=all
+--5447--    --track-origins=yes
+--5447--    --verbose
+--5447--    --log-file=valgrind-out.txt
+--5447-- Contents of /proc/version:
+--5447--   Linux version 4.4.0-64-generic (buildd@lcy01-20) (gcc version 4.8.4 (Ubuntu 4.8.4-2ubuntu1~14.04.3) ) #85~14.04.1-Ubuntu SMP Mon Feb 20 12:11:38 UTC 2017
+--5447-- Arch and hwcaps: X86, LittleEndian, x86-mmxext-sse1-sse2-lzcnt
+--5447-- Page sizes: currently 4096, max supported 4096
+--5447-- Valgrind library directory: /usr/lib/valgrind
+--5447-- Reading syms from /lib/i386-linux-gnu/ld-2.19.so
+--5447--   Considering /lib/i386-linux-gnu/ld-2.19.so ..
+--5447--   .. CRC mismatch (computed 1b1c4cf5 wanted 02b590da)
+--5447--   Considering /usr/lib/debug/lib/i386-linux-gnu/ld-2.19.so ..
+--5447--   .. CRC is valid
+--5447-- Reading syms from /home/cse312/Documents/output
+--5447-- Reading syms from /usr/lib/valgrind/memcheck-x86-linux
+--5447--   Considering /usr/lib/valgrind/memcheck-x86-linux ..
+--5447--   .. CRC mismatch (computed 9b80a843 wanted b9b8f553)
+--5447--    object doesn't have a symbol table
+--5447--    object doesn't have a dynamic symbol table
+--5447-- Scheduler: using generic scheduler lock implementation.
+--5447-- Reading suppressions file: /usr/lib/valgrind/default.supp
+==5447== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-5447-by-cse312-on-???
+==5447== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-5447-by-cse312-on-???
+==5447== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-5447-by-cse312-on-???
+==5447== 
+==5447== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==5447== don't want to do, unless you know exactly what you're doing,
+==5447== or are doing some strange experiment):
+==5447==   /usr/lib/valgrind/../../bin/vgdb --pid=5447 ...command...
+==5447== 
+==5447== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==5447==   /path/to/gdb ./output
+==5447== and then give GDB the following command
+==5447==   target remote | /usr/lib/valgrind/../../bin/vgdb --pid=5447
+==5447== --pid is optional if only one valgrind process is running
+==5447== 
+--5447-- REDIR: 0x4017e90 (ld-linux.so.2:strlen) redirected to 0x380755e2 (???)
+--5447-- REDIR: 0x4017ca0 (ld-linux.so.2:index) redirected to 0x380755bd (???)
+--5447-- Reading syms from /usr/lib/valgrind/vgpreload_core-x86-linux.so
+--5447--   Considering /usr/lib/valgrind/vgpreload_core-x86-linux.so ..
+--5447--   .. CRC mismatch (computed db3a9a41 wanted f4b91af9)
+--5447--    object doesn't have a symbol table
+--5447-- Reading syms from /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so
+--5447--   Considering /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so ..
+--5447--   .. CRC mismatch (computed fa818b99 wanted 420ff42b)
+--5447--    object doesn't have a symbol table
+==5447== WARNING: new redirection conflicts with existing -- ignoring it
+--5447--     old: 0x04017e90 (strlen              ) R-> (0000.0) 0x380755e2 ???
+--5447--     new: 0x04017e90 (strlen              ) R-> (2007.0) 0x0402d480 strlen
+--5447-- Reading syms from /lib/i386-linux-gnu/libc-2.19.so
+--5447--   Considering /lib/i386-linux-gnu/libc-2.19.so ..
+--5447--   .. CRC mismatch (computed 1039bceb wanted 920e1817)
+--5447--   Considering /usr/lib/debug/lib/i386-linux-gnu/libc-2.19.so ..
+--5447--   .. CRC is valid
+--5447-- REDIR: 0x40c5f40 (libc.so.6:strnlen) redirected to 0x4024580 (_vgnU_ifunc_wrapper)
+--5447-- REDIR: 0x40c7ef0 (libc.so.6:strncasecmp) redirected to 0x4024580 (_vgnU_ifunc_wrapper)
+--5447-- REDIR: 0x40cd870 (libc.so.6:memrchr) redirected to 0x4024580 (_vgnU_ifunc_wrapper)
+--5447-- REDIR: 0x40e08b0 (libc.so.6:wcslen) redirected to 0x4024580 (_vgnU_ifunc_wrapper)
+--5447-- REDIR: 0x40c60f0 (libc.so.6:__GI_strrchr) redirected to 0x402ce50 (__GI_strrchr)
+--5447-- REDIR: 0x40c5e30 (libc.so.6:strlen) redirected to 0x4024580 (_vgnU_ifunc_wrapper)
+--5447-- REDIR: 0x40cdfd0 (libc.so.6:__strlen_sse2_bsf) redirected to 0x402d3e0 (strlen)
+--5447-- REDIR: 0x40c5fe0 (libc.so.6:strncmp) redirected to 0x4024580 (_vgnU_ifunc_wrapper)
+--5447-- REDIR: 0x4185d70 (libc.so.6:__strncmp_ssse3) redirected to 0x402dbc0 (strncmp)
+--5447-- REDIR: 0x40c5f80 (libc.so.6:strncat) redirected to 0x4024580 (_vgnU_ifunc_wrapper)
+--5447-- REDIR: 0x40dba50 (libc.so.6:__strncat_ssse3) redirected to 0x402d260 (strncat)
+--5447-- REDIR: 0x40c5e80 (libc.so.6:__GI_strlen) redirected to 0x402d400 (__GI_strlen)
+--5447-- REDIR: 0x40c7620 (libc.so.6:__GI_memcmp) redirected to 0x402ff90 (__GI_memcmp)
+--5447-- REDIR: 0x40c79c0 (libc.so.6:memset) redirected to 0x4024580 (_vgnU_ifunc_wrapper)
+--5447-- REDIR: 0x4177210 (libc.so.6:__memset_sse2) redirected to 0x4030820 (memset)
+--5447-- REDIR: 0x40c57b0 (libc.so.6:strcpy) redirected to 0x4024580 (_vgnU_ifunc_wrapper)
+--5447-- REDIR: 0x40ce190 (libc.so.6:__strcpy_ssse3) redirected to 0x402d4c0 (strcpy)
+--5447-- REDIR: 0x40c52c0 (libc.so.6:strcat) redirected to 0x4024580 (_vgnU_ifunc_wrapper)
+--5447-- REDIR: 0x40d9750 (libc.so.6:__strcat_ssse3) redirected to 0x402d080 (strcat)
+--5447-- REDIR: 0x40c6cc0 (libc.so.6:strstr) redirected to 0x4031460 (strstr)
+--5447-- REDIR: 0x40c54d0 (libc.so.6:index) redirected to 0x4024580 (_vgnU_ifunc_wrapper)
+--5447-- REDIR: 0x40df0c0 (libc.so.6:__strchr_sse2_bsf) redirected to 0x402d040 (index)
+--5447-- REDIR: 0x40c1de0 (libc.so.6:free) redirected to 0x402b370 (free)
+==5447== 
+==5447== HEAP SUMMARY:
+==5447==     in use at exit: 0 bytes in 0 blocks
+==5447==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==5447== 
+==5447== All heap blocks were freed -- no leaks are possible
+==5447== 
+==5447== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==5447== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

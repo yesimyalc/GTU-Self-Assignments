@@ -1,0 +1,130 @@
+
+#include <multitasking.h>
+
+using namespace myos;
+using namespace myos::common;
+
+Task::Task(GlobalDescriptorTable *gdt, void entrypoint())
+{
+    cpustate = (CPUState*)(stack + 4096 - sizeof(CPUState));
+
+    cpustate -> eax = 0;
+    cpustate -> ebx = 0;
+    cpustate -> ecx = 0;
+    cpustate -> edx = 0;
+
+    cpustate -> esi = 0;
+    cpustate -> edi = 0;
+    cpustate -> ebp = 0;
+
+    /*
+    cpustate -> gs = 0;
+    cpustate -> fs = 0;
+    cpustate -> es = 0;
+    cpustate -> ds = 0;
+    */
+
+    // cpustate -> error = 0;
+
+    // cpustate -> esp = ;
+    cpustate -> eip = (uint32_t)entrypoint;
+    cpustate -> cs = gdt->CodeSegmentSelector();
+    // cpustate -> ss = ;
+    cpustate -> eflags = 0x202;
+
+    taskState=1;
+    waitingThread=-1;
+}
+
+Task::~Task()
+{
+}
+
+int Task::getTaskState()
+{
+    return taskState;
+}
+
+void Task::terminate()
+{
+    taskState=-1;
+}
+
+
+
+TaskManager::TaskManager()
+{
+    numTasks = 0;
+    currentTask = -1;
+    terminatedTasks=0;
+    blockedTasks=0;
+}
+
+TaskManager::~TaskManager()
+{
+}
+
+bool TaskManager::AddTask(Task* task)
+{
+    if(numTasks >= 256)
+        return false;
+    tasks[numTasks++] = task;
+    return true;
+}
+
+CPUState* TaskManager::Schedule(CPUState* cpustate)
+{
+    if(numTasks <= 0 || blockedTasks==numTasks)
+        return cpustate;
+
+    if(currentTask >= 0)
+        tasks[currentTask]->cpustate = cpustate;
+
+    while(true)
+    {
+        if(++currentTask >= numTasks)
+            currentTask %= numTasks;
+
+        if(tasks[currentTask]->getTaskState()==1)
+            break;
+    }
+
+    return tasks[currentTask]->cpustate;
+}
+
+void TaskManager::terminateRunningTask()
+{
+    if(numTasks==0 || terminatedTasks==numTasks)
+        return;
+
+    for(int i=0; i<numTasks; ++i)
+        if(tasks[i]->waitingThread==currentTask+1)
+        {
+            tasks[i]->taskState=1;
+            blockedTasks--;
+        }
+    tasks[currentTask]->terminate();
+    for(int i=currentTask; i<numTasks-1; i++)
+	tasks[i]=tasks[i+1];
+    numTasks--;
+}
+
+void TaskManager::joinThread(int threadNo)
+{
+    if(threadNo>numTasks || threadNo<1 || threadNo-1==currentTask || tasks[threadNo-1]->getTaskState()==-1)
+        return;
+
+    tasks[currentTask]->taskState=0;
+    tasks[currentTask]->waitingThread=threadNo;
+    blockedTasks++;
+}
+
+int TaskManager::getCurrentTask()
+{
+    return currentTask;
+}
+
+
+
+
+

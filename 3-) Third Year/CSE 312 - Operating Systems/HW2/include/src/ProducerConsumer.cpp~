@@ -1,0 +1,109 @@
+
+#include <common/types.h>
+#include <multitasking.h>
+#include <mysyscalls.h>
+#include <ProducerConsumer.h>
+
+using namespace myos;
+using namespace myos::common;
+
+int ProducerConsumerThread::turn=-1;
+int ProducerConsumerThread::itemCount=0;
+int ProducerConsumerThread::interested[]={0,0};
+
+void printf(char* str);
+void printfHex(uint8_t);
+
+ProducerConsumerThread::ProducerConsumerThread()
+{
+}
+
+ProducerConsumerThread::~ProducerConsumerThread()
+{
+}
+
+void ProducerConsumerThread::producerThread()
+{
+    while(true)
+    {
+        printf("Producer wanting to enter the critical region.\n");
+        enterRegion('p');
+        printf("Producer entered the critical region.\n");
+        itemCount++;
+	printf("Current item count: ");
+	printfHex(itemCount);
+	printf("\n");
+        leaveRegion('p');
+    }
+}
+
+void ProducerConsumerThread::consumerThread()
+{
+    while(true)
+    {
+	printf("Customer wanting to enter the critical region.\n");
+        enterRegion('c');
+        printf("Consumer entered the critical region.\n");
+        itemCount--;
+	printf("Current item count: ");
+	printfHex(itemCount);
+	printf("\n");
+        leaveRegion('c');
+    }
+}
+
+void ProducerConsumerThread::enterRegion(char identity)
+{
+    int otherIndex;
+    int processIndex;
+    int i=0;
+
+    if(identity=='p')
+        processIndex=0;
+    else if(identity=='c')
+        processIndex=1;
+    else
+        return;
+    otherIndex=1-processIndex;
+
+    if(processIndex==0)
+        while(itemCount==MAX_SIZE)
+	{
+	    if(i%200000==0)
+		printf("Producer: There is no space for a new product.\n");
+	    i++;
+	}
+    else
+        while(itemCount==0)
+	{	
+	    if(i%200000==0)
+		printf("Consumer: There is no product to consume.\n");
+	    i++;
+	}
+
+    interested[processIndex]=1;
+    turn=processIndex;
+
+    while(turn==processIndex && interested[otherIndex]==1)
+    {
+        if(i%200000==0 && processIndex==0)
+	   printf("Producer: Customer is in the critical region. Cannot enter critical region.\n");
+	else if(i%200000==0 && processIndex==1)
+	   printf("Customer: Producer is in the critical region. Cannot enter critical region.\n");
+        i++;
+    }
+}
+
+void ProducerConsumerThread::leaveRegion(char identity)
+{
+    int processIndex;
+    if(identity=='p')
+        processIndex=0;
+    else if(identity=='c')
+        processIndex=1;
+    else
+        return;
+    printf("Leaving critical region soon.\n");
+    interested[processIndex]=0;
+}
+
